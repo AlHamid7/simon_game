@@ -7,24 +7,24 @@ var level = 0;
 
 
 
-$(document).keypress(function(){
-if(!started){
-  nextSequence();
-  started = true;
-  $("#level-title").text("Level " + level);
-}
-});
+// $(document).keypress(function(){
+// if(!started){
+//   nextSequence();
+//   started = true;
+//   $("#level-title").text("Level " + level);
+// }
+// });
 
 
 
-$(".btn").click(function(){
-  var userChosenColor = $(this).attr("id");
-  userClickedPattern.push(userChosenColor);
+// $(".btn").click(function(){
+//   var userChosenColor = $(this).attr("id");
+//   userClickedPattern.push(userChosenColor);
 
-  playsound(userChosenColor);
-  animatePress(userChosenColor);
-  checkAnswer(userClickedPattern.length-1);
-});
+//   playsound(userChosenColor);
+//   animatePress(userChosenColor);
+//   checkAnswer(userClickedPattern.length-1);
+// });
 
 
 
