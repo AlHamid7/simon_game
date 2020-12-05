@@ -28,7 +28,7 @@ var level = 0;
 
 
 
-$(document).touchstart(function(){
+$(document).on("tap", function(){
 if(!started){
   nextSequence();
   started = true;
@@ -36,7 +36,7 @@ if(!started){
 }
 });
 
-$(".btn").touchstart(function(){
+$(".btn").on("tap", (function(){
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
 
