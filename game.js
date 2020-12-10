@@ -7,28 +7,7 @@ var level = 0;
 
 
 
-// $(document).keypress(function(){
-// if(!started){
-//   nextSequence();
-//   started = true;
-//   $("#level-title").text("Level " + level);
-// }
-// });
-
-
-
-// $(".btn").click(function(){
-//   var userChosenColor = $(this).attr("id");
-//   userClickedPattern.push(userChosenColor);
-
-//   playsound(userChosenColor);
-//   animatePress(userChosenColor);
-//   checkAnswer(userClickedPattern.length-1);
-// });
-
-
-
-$(document).on("tap", function(){
+$(document).keypress(function(){
 if(!started){
   nextSequence();
   started = true;
@@ -36,7 +15,9 @@ if(!started){
 }
 });
 
-$(".btn").on("tap", (function(){
+
+
+$(".btn").click(function(){
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
 
@@ -44,6 +25,26 @@ $(".btn").on("tap", (function(){
   animatePress(userChosenColor);
   checkAnswer(userClickedPattern.length-1);
 });
+
+
+//trying for mobile users
+
+// $(document).on("tap", function(){
+// if(!started){
+//   nextSequence();
+//   started = true;
+//   $("#level-title").text("Level " + level);
+// }
+// });
+
+// $(".btn").on("tap", (function(){
+//   var userChosenColor = $(this).attr("id");
+//   userClickedPattern.push(userChosenColor);
+
+//   playsound(userChosenColor);
+//   animatePress(userChosenColor);
+//   checkAnswer(userClickedPattern.length-1);
+// });
 
 function nextSequence(){
   userClickedPattern = [];
